@@ -51,5 +51,8 @@ void turn_off_mixer(void) {
 void turn_on_synths(void) {
     if (digitalRead(MIXER_RELAY) == HIGH) {
         turn_off_mixer();
+        delay(500);
+        digitalWrite(SYNTH_RELAY, RELAY_ON);
+        turn_on_speakers();
     }
 }
