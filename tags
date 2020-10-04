@@ -1,0 +1,57 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/86bdb84c/
+ARDMK_DIR	Makefile	/^ARDMK_DIR = \/usr\/share\/arduino$/;"	m
+ARDUINO_CORE_PATH	Makefile	/^ARDUINO_CORE_PATH = \/usr\/share\/arduino\/hardware\/archlinux-arduino\/avr\/cores\/arduino$/;"	m
+ARDUINO_DIR	Makefile	/^ARDUINO_DIR = \/usr\/share\/arduino$/;"	m
+ARDUINO_PORT	Makefile	/^ARDUINO_PORT = \/dev\/ttyACM1$/;"	m
+ARDUINO_VAR_PATH	Makefile	/^ARDUINO_VAR_PATH = \/usr\/share\/arduino\/hardware\/archlinux-arduino\/avr\/variants$/;"	m
+AVRDUDE_CONF	Makefile	/^AVRDUDE_CONF = \/etc\/avrdude.conf$/;"	m
+AVR_TOOLS_DIR	Makefile	/^AVR_TOOLS_DIR = \/usr$/;"	m
+BOARDS_TXT	Makefile	/^BOARDS_TXT = \/usr\/share\/arduino\/hardware\/archlinux-arduino\/avr\/boards.txt$/;"	m
+BOARD_TAG	Makefile	/^BOARD_TAG    = uno$/;"	m
+BOOTLOADER_PARENT	Makefile	/^BOOTLOADER_PARENT = \/usr\/share\/arduino\/hardware\/archlinux-arduino\/avr\/bootloaders$/;"	m
+MIXER_RELAY	build/sketch/power-sequencer.ino.cpp	/^    #define MIXER_RELAY /;"	d	file:
+MIXER_SWITCH	build/sketch/power-sequencer.ino.cpp	/^    #define MIXER_SWITCH /;"	d	file:
+RELAY_OFF	build/sketch/power-sequencer.ino.cpp	/^#define RELAY_OFF /;"	d	file:
+RELAY_ON	build/sketch/power-sequencer.ino.cpp	/^#define RELAY_ON /;"	d	file:
+SPEAKER_RELAY	build/sketch/power-sequencer.ino.cpp	/^    #define SPEAKER_RELAY /;"	d	file:
+SPEAKER_SWITCH	build/sketch/power-sequencer.ino.cpp	/^    #define SPEAKER_SWITCH /;"	d	file:
+SYNTH_RELAY	build/sketch/power-sequencer.ino.cpp	/^    #define SYNTH_RELAY /;"	d	file:
+SYNTH_SWITCH	build/sketch/power-sequencer.ino.cpp	/^    #define SYNTH_SWITCH /;"	d	file:
+TEST_MODE	build/sketch/power-sequencer.ino.cpp	/^#define TEST_MODE$/;"	d	file:
+__NANO__	build/sketch/power-sequencer.ino.cpp	/^#define __NANO__$/;"	d	file:
+additionalFiles	build/build.options.json	/^  "additionalFiles": "",$/;"	s
+builtInLibrariesFolders	build/build.options.json	/^  "builtInLibrariesFolders": "",$/;"	s
+builtInToolsFolders	build/build.options.json	/^  "builtInToolsFolders": "\/usr\/share\/arduino\/tools-builder,\/home\/arch\/.arduino15\/package/;"	s
+check_mixer	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^bool check_mixer(void) {$/;"	f	typeref:typename:bool
+check_mixer	build/sketch/power-sequencer.ino.cpp	/^bool check_mixer(void) {$/;"	f	typeref:typename:bool
+check_speakers	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^bool check_speakers(void) {$/;"	f	typeref:typename:bool
+check_speakers	build/sketch/power-sequencer.ino.cpp	/^bool check_speakers(void) {$/;"	f	typeref:typename:bool
+compiler.optimization_flags	build/build.options.json	/^  "compiler.optimization_flags": "",$/;"	s
+customBuildProperties	build/build.options.json	/^  "customBuildProperties": "programmer=avrisp2,build.path=\/home\/arch\/Projects\/arduino\/power/;"	s
+fqbn	build/build.options.json	/^  "fqbn": "arduino:avr:uno",$/;"	s
+hardwareFolders	build/build.options.json	/^  "hardwareFolders": "\/usr\/share\/arduino\/hardware,\/home\/arch\/.arduino15\/packages",$/;"	s
+loop	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void loop() {$/;"	f	typeref:typename:void
+loop	build/sketch/power-sequencer.ino.cpp	/^void loop() {$/;"	f	typeref:typename:void
+otherLibrariesFolders	build/build.options.json	/^  "otherLibrariesFolders": "\/home\/arch\/Arduino\/libraries",$/;"	s
+runtime.ide.version	build/build.options.json	/^  "runtime.ide.version": "10813",$/;"	s
+setup	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void setup() {$/;"	f	typeref:typename:void
+setup	build/sketch/power-sequencer.ino.cpp	/^void setup() {$/;"	f	typeref:typename:void
+sketchLocation	build/build.options.json	/^  "sketchLocation": "\/home\/arch\/Projects\/arduino\/power-sequencer\/power-sequencer.ino"$/;"	s
+turn_off_mixer	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void turn_off_mixer(void) {$/;"	f	typeref:typename:void
+turn_off_mixer	build/sketch/power-sequencer.ino.cpp	/^void turn_off_mixer(void) {$/;"	f	typeref:typename:void
+turn_off_synths	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void turn_off_synths(void) {$/;"	f	typeref:typename:void
+turn_off_synths	build/sketch/power-sequencer.ino.cpp	/^void turn_off_synths(void) {$/;"	f	typeref:typename:void
+turn_on_mixer	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void turn_on_mixer(void) {$/;"	f	typeref:typename:void
+turn_on_mixer	build/sketch/power-sequencer.ino.cpp	/^void turn_on_mixer(void) {$/;"	f	typeref:typename:void
+turn_on_speakers	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void turn_on_speakers(void) {$/;"	f	typeref:typename:void
+turn_on_speakers	build/sketch/power-sequencer.ino.cpp	/^void turn_on_speakers(void) {$/;"	f	typeref:typename:void
+turn_on_synths	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void turn_on_synths(void) {$/;"	f	typeref:typename:void
+turn_on_synths	build/sketch/power-sequencer.ino.cpp	/^void turn_on_synths(void) {$/;"	f	typeref:typename:void
