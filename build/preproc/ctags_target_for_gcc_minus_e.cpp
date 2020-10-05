@@ -2,7 +2,12 @@
 
 
 //#define __UNO__
-# 21 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+# 24 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+struct relay_switch {
+    int u8_switch;
+    int u8_relay;
+}
+
 void setup() {
     digitalWrite(3, 0);
     digitalWrite(4, 0);
@@ -14,6 +19,9 @@ void setup() {
     pinMode(3, 0x1);
     pinMode(4, 0x1);
     pinMode(5, 0x1);
+
+    struct relay_switch synth = {8, 5};
+
 }
 
 void turn_on_speakers(void) {
@@ -27,6 +35,9 @@ void turn_on_mixer(void) {
           digitalWrite(4, 1);
           delay(3000);
           turn_on_speakers();
+    }
+    else {
+        digitalWrite(4, 1);
     }
 }
 
@@ -67,7 +78,7 @@ void turn_off_synths(void) {
 
 void loop() {
     digitalWrite(13, 0x1);
-    delay(1000);
+    delay(100);
     digitalWrite(13, 0x0);
-    delay(1000);
+    delay(100);
 }

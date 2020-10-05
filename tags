@@ -10,15 +10,18 @@
 ARDMK_DIR	Makefile	/^ARDMK_DIR = \/usr\/share\/arduino$/;"	m
 ARDUINO_CORE_PATH	Makefile	/^ARDUINO_CORE_PATH = \/usr\/share\/arduino\/hardware\/archlinux-arduino\/avr\/cores\/arduino$/;"	m
 ARDUINO_DIR	Makefile	/^ARDUINO_DIR = \/usr\/share\/arduino$/;"	m
-ARDUINO_PORT	Makefile	/^ARDUINO_PORT = \/dev\/ttyACM1$/;"	m
+ARDUINO_PORT	Makefile	/^ARDUINO_PORT = \/dev\/ttyACM0$/;"	m
 ARDUINO_VAR_PATH	Makefile	/^ARDUINO_VAR_PATH = \/usr\/share\/arduino\/hardware\/archlinux-arduino\/avr\/variants$/;"	m
 AVRDUDE_CONF	Makefile	/^AVRDUDE_CONF = \/etc\/avrdude.conf$/;"	m
 AVR_TOOLS_DIR	Makefile	/^AVR_TOOLS_DIR = \/usr$/;"	m
+Arduino Power Sequencer	README.md	/^# Arduino Power Sequencer$/;"	c
 BOARDS_TXT	Makefile	/^BOARDS_TXT = \/usr\/share\/arduino\/hardware\/archlinux-arduino\/avr\/boards.txt$/;"	m
-BOARD_TAG	Makefile	/^BOARD_TAG    = uno$/;"	m
+BOARD_SUB	Makefile	/^BOARD_SUB    = atmega328$/;"	m
+BOARD_TAG	Makefile	/^BOARD_TAG    = nano$/;"	m
 BOOTLOADER_PARENT	Makefile	/^BOOTLOADER_PARENT = \/usr\/share\/arduino\/hardware\/archlinux-arduino\/avr\/bootloaders$/;"	m
 MIXER_RELAY	build/sketch/power-sequencer.ino.cpp	/^    #define MIXER_RELAY /;"	d	file:
 MIXER_SWITCH	build/sketch/power-sequencer.ino.cpp	/^    #define MIXER_SWITCH /;"	d	file:
+Overview	README.md	/^## Overview$/;"	s	chapter:Arduino Power Sequencer
 RELAY_OFF	build/sketch/power-sequencer.ino.cpp	/^#define RELAY_OFF /;"	d	file:
 RELAY_ON	build/sketch/power-sequencer.ino.cpp	/^#define RELAY_ON /;"	d	file:
 SPEAKER_RELAY	build/sketch/power-sequencer.ino.cpp	/^    #define SPEAKER_RELAY /;"	d	file:
@@ -41,8 +44,10 @@ hardwareFolders	build/build.options.json	/^  "hardwareFolders": "\/usr\/share\/a
 loop	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void loop() {$/;"	f	typeref:typename:void
 loop	build/sketch/power-sequencer.ino.cpp	/^void loop() {$/;"	f	typeref:typename:void
 otherLibrariesFolders	build/build.options.json	/^  "otherLibrariesFolders": "\/home\/arch\/Arduino\/libraries",$/;"	s
+relay_switch	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^struct relay_switch {$/;"	s	file:
+relay_switch	build/sketch/power-sequencer.ino.cpp	/^struct relay_switch {$/;"	s	file:
 runtime.ide.version	build/build.options.json	/^  "runtime.ide.version": "10813",$/;"	s
-setup	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void setup() {$/;"	f	typeref:typename:void
+setup	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void setup() {$/;"	f	typeref:struct:relay_switch void
 setup	build/sketch/power-sequencer.ino.cpp	/^void setup() {$/;"	f	typeref:typename:void
 sketchLocation	build/build.options.json	/^  "sketchLocation": "\/home\/arch\/Projects\/arduino\/power-sequencer\/power-sequencer.ino"$/;"	s
 turn_off_mixer	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void turn_off_mixer(void) {$/;"	f	typeref:typename:void
@@ -55,3 +60,7 @@ turn_on_speakers	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void turn_on_s
 turn_on_speakers	build/sketch/power-sequencer.ino.cpp	/^void turn_on_speakers(void) {$/;"	f	typeref:typename:void
 turn_on_synths	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^void turn_on_synths(void) {$/;"	f	typeref:typename:void
 turn_on_synths	build/sketch/power-sequencer.ino.cpp	/^void turn_on_synths(void) {$/;"	f	typeref:typename:void
+u8_relay	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^    int u8_relay;$/;"	m	struct:relay_switch	typeref:typename:int	file:
+u8_relay	build/sketch/power-sequencer.ino.cpp	/^    int u8_relay;$/;"	m	struct:relay_switch	typeref:typename:int	file:
+u8_switch	build/preproc/ctags_target_for_gcc_minus_e.cpp	/^    int u8_switch;$/;"	m	struct:relay_switch	typeref:typename:int	file:
+u8_switch	build/sketch/power-sequencer.ino.cpp	/^    int u8_switch;$/;"	m	struct:relay_switch	typeref:typename:int	file:

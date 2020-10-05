@@ -8,9 +8,9 @@ BOARDS_TXT = /usr/share/arduino/hardware/archlinux-arduino/avr/boards.txt
 ARDUINO_VAR_PATH = /usr/share/arduino/hardware/archlinux-arduino/avr/variants
 BOOTLOADER_PARENT = /usr/share/arduino/hardware/archlinux-arduino/avr/bootloaders
 
-BOARD_TAG    = uno
-# BOARD_SUB    = atmega328
-ARDUINO_PORT = /dev/ttyACM1
+BOARD_TAG    = nano
+BOARD_SUB    = atmega328
+ARDUINO_PORT = /dev/ttyACM0
 include /usr/share/arduino/Arduino.mk
 
 

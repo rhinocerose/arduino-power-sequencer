@@ -21,6 +21,11 @@
 #define RELAY_OFF       0
 #define RELAY_ON        1
 
+struct relay_switch {
+    int u8_switch;
+    int u8_relay;
+};
+
 void setup() {
     digitalWrite(SPEAKER_RELAY, RELAY_OFF);
     digitalWrite(MIXER_RELAY, RELAY_OFF);
@@ -32,6 +37,23 @@ void setup() {
     pinMode(SPEAKER_RELAY, OUTPUT);
     pinMode(MIXER_RELAY, OUTPUT);
     pinMode(SYNTH_RELAY, OUTPUT);
+
+    struct relay_switch synth = {SYNTH_SWITCH, SYNTH_RELAY};
+
+}
+
+bool check_mixer(void) {
+    if ((digitalRead(MIXER_RELAY == HIGH) || digitalRead(MIXER_SWITCH == HIGH))){
+        return true;
+    }
+    else return false;
+}
+
+bool check_speakers(void) {
+    if ((digitalRead(SPEAKER_RELAY == HIGH) || digitalRead(SPEAKER_SWITCH == HIGH))){
+        return true;
+    }
+    else return false;
 }
 
 void turn_on_speakers(void) {
@@ -56,20 +78,6 @@ void turn_off_mixer(void) {
     delay(500);
     digitalWrite(MIXER_RELAY, RELAY_OFF);
     delay(500);
-}
-
-bool check_mixer(void) {
-    if ((digitalRead(MIXER_RELAY == HIGH) || digitalRead(MIXER_SWITCH == HIGH))){
-        return true;
-    }
-    else return false;
-}
-
-bool check_speakers(void) {
-    if ((digitalRead(SPEAKER_RELAY == HIGH) || digitalRead(SPEAKER_SWITCH == HIGH))){
-        return true;
-    }
-    else return false;
 }
 
 void turn_on_synths(void) {

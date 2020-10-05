@@ -13,32 +13,40 @@
     #define SYNTH_SWITCH    8
 #elif defined(__UNO__)
     #define SPEAKER_RELAY   3
+    #define SPEAKER_SWITCH  6
     #define MIXER_RELAY     4
+    #define MIXER_SWITCH    7
     #define SYNTH_RELAY     5
+    #define SYNTH_SWITCH    8
 #endif
 
 #define RELAY_OFF       0
 #define RELAY_ON        1
 
-#line 21 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+struct relay_switch {
+    int u8_switch;
+    int u8_relay;
+}
+
+#line 29 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
 void setup();
-#line 34 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+#line 45 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
 void turn_on_speakers(void);
-#line 38 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+#line 49 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
 void turn_on_mixer(void);
-#line 48 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
-void turn_off_mixer(void);
-#line 55 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
-bool check_mixer(void);
 #line 62 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
-bool check_speakers(void);
+void turn_off_mixer(void);
 #line 69 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
-void turn_on_synths(void);
-#line 78 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
-void turn_off_synths(void);
+bool check_mixer(void);
+#line 76 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+bool check_speakers(void);
 #line 83 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+void turn_on_synths(void);
+#line 92 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+void turn_off_synths(void);
+#line 97 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
 void loop();
-#line 21 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
+#line 29 "/home/arch/Projects/arduino/power-sequencer/power-sequencer.ino"
 void setup() {
     digitalWrite(SPEAKER_RELAY, RELAY_OFF);
     digitalWrite(MIXER_RELAY, RELAY_OFF);
@@ -50,6 +58,9 @@ void setup() {
     pinMode(SPEAKER_RELAY, OUTPUT);
     pinMode(MIXER_RELAY, OUTPUT);
     pinMode(SYNTH_RELAY, OUTPUT);
+
+    struct relay_switch synth = {SYNTH_SWITCH, SYNTH_RELAY};
+
 }
 
 void turn_on_speakers(void) {
@@ -63,6 +74,9 @@ void turn_on_mixer(void) {
           digitalWrite(MIXER_RELAY, RELAY_ON);
           delay(3000);
           turn_on_speakers();
+    }
+    else {
+        digitalWrite(MIXER_RELAY, RELAY_ON);
     }
 }
 
@@ -103,8 +117,8 @@ void turn_off_synths(void) {
 
 void loop() {
     digitalWrite(LED_BUILTIN, HIGH);
-    delay(1000);
+    delay(100);
     digitalWrite(LED_BUILTIN, LOW);
-    delay(1000);
+    delay(100);
 }
 
