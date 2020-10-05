@@ -45,6 +45,13 @@ void setup() {
 
 }
 
+/**
+ * @brief
+ *
+ * @param Switch
+ *
+ * @return
+ */
 bool check_state(struct relay_switch Switch) {
     if ((digitalRead(Switch.u8_relay == HIGH) || digitalRead(Switch.u8_switch == HIGH))){
         return true;
